@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Pokemon } from '../model/model';
 
 @Component({
   selector: 'app-modal',
@@ -7,6 +8,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent  implements OnInit {
+  pokemons: Pokemon[] = [];
 
   constructor(private modalController: ModalController) { }
 
