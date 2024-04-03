@@ -1,0 +1,29 @@
+ion-button {
+    margin: 5px;
+    font-size: 24px;
+}
+
+ion-grid {
+    margin-top: 20px;
+}
+
+ion-label {
+    margin-top: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+.calc-display {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 70, 171);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.calc-margin-top {
+    margin-top: 20px;
+}
+
+.button{
+    --ion-color-primary: rgb(250, 115, 169);
+}

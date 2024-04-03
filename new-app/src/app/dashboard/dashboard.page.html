@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-title></ion-title>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Welcome User!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <br>API RESOURCE<br>
+    <div class="content" *ngFor="let pokemon of pokemons; let i = index;">
+      <div *ngIf="i < 10">
+        Pokemon name: {{pokemon.name}}
+      </div>
+    </div>
+  </div>
+  <div>
+    <br>COMPONENTS<br>
+    <ion-button color="primary" (click)="toggleModal()">Modal</ion-button>
+    <div>
+    <ion-button color="primary" (click)="alert()">Alert</ion-button>
+    <div>
+    <ion-button color="primary" (click)="presentToast()">Toast</ion-button><br>
+    <div>
+    <br>VOLUME<br>
+    <ion-range min="0" max="100" [(ngModel)]="volume"></ion-range>
+    <div>
+      <br>TOGGLE<br>
+      <ion-toggle [(ngModel)]="condition"></ion-toggle><br>
+        <div>
+          <br>
+          <ion-button>Click This!</ion-button>
+          <br>
+          <br>COLOR BUTTON<br>
+          <ion-button color="primary">Primary Button</ion-button><br>
+          <ion-button color="secondary">Secondary Button</ion-button><br>
+          <ion-button color="danger">Danger Button</ion-button><br>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+</ion-content>
+
+<section>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+        <ion-fab-button>
+            <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+            <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</section>
+

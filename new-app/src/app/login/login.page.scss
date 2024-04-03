@@ -1,0 +1,30 @@
+.button {
+  margin: 20px;
+  width: 100%;
+}
+h1 {
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  word-spacing: 10px;
+}
+
+h1 span {
+  letter-spacing: 15px;
+  display: block;
+  margin-top: 10px;
+  font-size: 150%;
+}
+
+ion-content {
+  text-align: center;
+}
+
+.button {
+  margin: 20px auto;
+  width: 50%;
+  height: 6%;
+  max-width: 200px;
+  --ion-color-primary: rgb(242, 113, 126);
+}
