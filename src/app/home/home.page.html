@@ -1,129 +1,31 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Dashboard</ion-title>
+      <ion-title size="large">create</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div class="aboutmyself">
-    <div class="DEVP">
-      <h1>DEVELOPERS PORTFOLIO</h1>
-    <div class="about-content">
-      <img src="../../assets/img/me.png">
-    </div>
-    <br>
-    <div class="column right">
-      <div class="name">NORIEL DUCANES LUMAWOD</div>
-      <div class="desc">
-        <p> I'm Noriel Ducanes Lumawod, 20 years old. A College Student Of Pamantasan Ng Lungsod Ng Valenzuela.
-          2nd year college taking Bachelor Of Science Information Technology. 
-          My Hobbies are reading wattpad and playing online games.And also I interested with a sports badminton and volleyball. I have two types of Technical Skills, The first one is software skills
-          Adobe Photoshop, Illustration, figma, Canva and lastly Microsoft Word, Excel, Powerpoint.
-          And Lastly, Coding Skills which is html, Css, Visual code studio and Visual Studio. After Graduated i pursuing to be a web developer.</p>
+  <div class="bg">
+    <h1>WATTPAD LIBRARY</h1>
+    <div class="content" *ngFor="let user of userList">
+      <div class="section">
+        <div class="section-all">
+        <h2>Title: {{user.title}}</h2>
+        <h2>Author: {{user.author}}</h2>
+        <h2>Genre: {{user.genre}}</h2>
+        <h2>completeChapter: {{user.completeChapter}}</h2>
+        <h2>Ratings: {{user.ratings}}</h2>
+      <div class="btn-click">
+        <ion-button color="success" (click)="update(user)" class="button">UPDATE</ion-button>
+        <ion-button color="danger" (click)="delete(user)" class="button">DELETE</ion-button>
+        <ion-button color="warning" (click)="create()" class="button">CREATE</ion-button>
+        </div>
       </div>
-    </div>
-
-    <div class="under-column">
-  
-      <div class="text1">
-      <div class="text">Hobbies</div>
-        <ul>
-          <li>Reading Wattpad</li>
-          <li>Playing online games</li>
-          <li>Watching Youtube/TikTok</li>
-          <li>Sleeping</li>
-          <li>Mag-relapse</li>
-          <li>Mamiss sya</li>
-        </ul>
       </div>
-      <div class="text1">
-        <div class="text">Likes</div>
-          <ul>
-            <li>Cats</li>
-            <li>Ice Cream</li>
-            <li>Spicy</li>
-            <li>Sunset</li>
-            <li>Moon</li>
-            <li>Midnight</li>
-          </ul>
-        </div>
-  
-        <div class="text1">
-        <div class="text">Talent</div>
-          <ul>
-            <li>Editing</li>
-            <li>Adobe Software</li>
-            <li>Sports (volleyball)</li>
-            <li>Singing </li>
-            <li>Cooking</li>
-          </ul>
-        </div>
-  
-        <div class="text1">
-        <div class="text">Skills</div>
-          <ul>
-            <li>Organization</li>
-            <li>Communication</li>
-            <li>Empathy</li>
-            <li>Data Encoder</li>
-            <li>Designer</li>
-          </ul>
-        </div>
-
-        <div class="text1">
-          <div class="text">How do you see yourself in 5 years?</div>
-            <p>
-              Honestly, I don't see myself doing well in 5 years. but Hopefully in 5 years I'll become what i want to be and have stable financial.</p>
-          </div>
-          <div class="text1">
-            <div class="text">Strengths and Weaknesses</div>
-              <h4>Strengths will be:</h4>
-              <ul>
-                <li>ME</li>
-                <li>ME</li>
-                <li>ME</li>
-                <li>ME</li>
-              </ul>
-      
-              <h4>Weaknesses will be:</h4>
-              <ul>
-                <li>Compared</li>
-                <li>Shy</li>
-                <li>Insecure</li>
-                <li>Slow learner</li>
-                <li>pag nakatitig sya</li>
-              </ul>
-            </div>
-      
-            <div class="text1">
-            <div class="text">Motto</div>
-              <p>One day soon you'll get what you deserve and it'll all make sense.</p>
-            </div>
-      
-            <div class="text1">
-            <div class="text">Love Language mo? Bakit?</div>
-              <p>I think my Love Language is  Quality Time, gusto ko kahit busy tayo may oras ka pa rin makipag bonding saakin kaya siguro yan love language ko kasi attention seeker ako HAHAHA.
-              </p>
-            </div>
-      
-            <div class="text1">
-            <div class="text">Kung pagkain ka ano ka? Bakit?</div>
-              <p>Simpleng bowl ng Pares na nagbibigay ng kumporta at init sa bawat higop ng sabaw.</p>
-            </div>
-      
-            <div class="text1">
-            <div class="text">Pet Peeve</div>
-              <p>Yung galing labas tas hihiga sa kama ko -,-</p>
-            </div>
-          </div>
-          <div class="log-out-btn">
-            <ion-fab-button (click)="logOut()">
-              <ion-icon name="log-out" color="light"></ion-icon>
-            </ion-fab-button>
-          </div>
     </div>
   </div>
-
-  
-  
-     
+  <div class="log-out-btn">
+    <ion-fab-button (click)="logOut()">
+      <ion-icon name="log-out" color="light"></ion-icon>
+    </ion-fab-button>
+  </div>
+</ion-content>

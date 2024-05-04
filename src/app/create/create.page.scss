@@ -1,0 +1,25 @@
+ion-toolbar {
+    --ion-toolbar-background: #ffffff;
+    --ion-text-color: #ffffff;
+    
+    text-align: center;
+}
+ion-content {
+    --ion-background-color: linear-gradient(to bottom, #000000 0%, #000000 100%);
+    --ion-text-color: #ffffff;
+}
+.genre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.add-lib-Btn {
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+}
